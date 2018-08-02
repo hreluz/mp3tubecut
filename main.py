@@ -8,8 +8,7 @@ def download(url):
 	commands = [x.strip() for x in basic_command.split()]
 	commands.append(url)
 	subprocess.call(commands)
-	
 	print("Done!")
 
-
-download(sys.argv[1])	
+for videoID in sys.argv[1].split(','):
+	download(videoID)
